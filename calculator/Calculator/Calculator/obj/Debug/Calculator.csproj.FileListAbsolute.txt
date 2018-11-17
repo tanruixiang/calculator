@@ -1,0 +1,10 @@
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.MainForm.resources
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\qq237\Documents\GitHub\calculator\calculator\Calculator\Calculator\obj\Debug\Calculator.pdb
