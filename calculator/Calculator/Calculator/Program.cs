@@ -19,4 +19,11 @@ namespace Calculator
             Application.Run(new MainForm());
         }
     }
+    public class Results
+    {
+        public int Number1=0;
+        public int Number2=0;
+        public string Symbol;
+        public int Result1;
+    }
 }

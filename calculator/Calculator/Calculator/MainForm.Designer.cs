@@ -29,36 +29,40 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Mod = new System.Windows.Forms.Button();
-            this.Num_8 = new System.Windows.Forms.Button();
-            this.Num_9 = new System.Windows.Forms.Button();
-            this.Num_5 = new System.Windows.Forms.Button();
-            this.Num_6 = new System.Windows.Forms.Button();
-            this.Num_3 = new System.Windows.Forms.Button();
-            this.Num_2 = new System.Windows.Forms.Button();
-            this._Point = new System.Windows.Forms.Button();
-            this.Num_0 = new System.Windows.Forms.Button();
-            this.Equal = new System.Windows.Forms.Button();
-            this.Plus = new System.Windows.Forms.Button();
-            this.Minus = new System.Windows.Forms.Button();
-            this.Negate = new System.Windows.Forms.Button();
-            this.Num_1 = new System.Windows.Forms.Button();
-            this.Num_4 = new System.Windows.Forms.Button();
-            this.Multiply = new System.Windows.Forms.Button();
-            this.Num_7 = new System.Windows.Forms.Button();
-            this.Divide = new System.Windows.Forms.Button();
-            this.Backspace = new System.Windows.Forms.Button();
-            this.C = new System.Windows.Forms.Button();
-            this.CE = new System.Windows.Forms.Button();
-            this.Reciprocal = new System.Windows.Forms.Button();
-            this.Square = new System.Windows.Forms.Button();
             this.Sqrt = new System.Windows.Forms.Button();
+            this.Square = new System.Windows.Forms.Button();
+            this.Reciprocal = new System.Windows.Forms.Button();
+            this.CE = new System.Windows.Forms.Button();
+            this.C = new System.Windows.Forms.Button();
+            this.Backspace = new System.Windows.Forms.Button();
+            this.Divide = new System.Windows.Forms.Button();
+            this.Num_7 = new System.Windows.Forms.Button();
+            this.Multiply = new System.Windows.Forms.Button();
+            this.Num_4 = new System.Windows.Forms.Button();
+            this.Num_1 = new System.Windows.Forms.Button();
+            this.Negate = new System.Windows.Forms.Button();
+            this.Minus = new System.Windows.Forms.Button();
+            this.Plus = new System.Windows.Forms.Button();
+            this.Equal = new System.Windows.Forms.Button();
+            this.Num_0 = new System.Windows.Forms.Button();
+            this._Point = new System.Windows.Forms.Button();
+            this.Num_2 = new System.Windows.Forms.Button();
+            this.Num_3 = new System.Windows.Forms.Button();
+            this.Num_6 = new System.Windows.Forms.Button();
+            this.Num_5 = new System.Windows.Forms.Button();
+            this.Num_9 = new System.Windows.Forms.Button();
+            this.Num_8 = new System.Windows.Forms.Button();
+            this.Mod = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Result = new System.Windows.Forms.RichTextBox();
-            this.Expression = new System.Windows.Forms.RichTextBox();
             this.ANS = new System.Windows.Forms.Label();
+            this.Expression = new System.Windows.Forms.RichTextBox();
+            this.Result = new System.Windows.Forms.RichTextBox();
+            this.Status = new System.Windows.Forms.PictureBox();
+            this.StatusName = new System.Windows.Forms.Label();
+            this.ExpressionL = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Status)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,229 +97,15 @@
             this.panel1.Size = new System.Drawing.Size(483, 458);
             this.panel1.TabIndex = 0;
             // 
-            // Mod
+            // Sqrt
             // 
-            this.Mod.Font = new System.Drawing.Font("宋体", 18F);
-            this.Mod.Location = new System.Drawing.Point(1, 3);
-            this.Mod.Margin = new System.Windows.Forms.Padding(1);
-            this.Mod.Name = "Mod";
-            this.Mod.Size = new System.Drawing.Size(118, 73);
-            this.Mod.TabIndex = 0;
-            this.Mod.Text = "%";
-            this.Mod.UseVisualStyleBackColor = true;
-            // 
-            // Num_8
-            // 
-            this.Num_8.Location = new System.Drawing.Point(121, 153);
-            this.Num_8.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_8.Name = "Num_8";
-            this.Num_8.Size = new System.Drawing.Size(118, 73);
-            this.Num_8.TabIndex = 1;
-            this.Num_8.Text = "8";
-            this.Num_8.UseVisualStyleBackColor = true;
-            // 
-            // Num_9
-            // 
-            this.Num_9.Location = new System.Drawing.Point(241, 153);
-            this.Num_9.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_9.Name = "Num_9";
-            this.Num_9.Size = new System.Drawing.Size(118, 73);
-            this.Num_9.TabIndex = 2;
-            this.Num_9.Text = "9";
-            this.Num_9.UseVisualStyleBackColor = true;
-            // 
-            // Num_5
-            // 
-            this.Num_5.Location = new System.Drawing.Point(121, 228);
-            this.Num_5.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_5.Name = "Num_5";
-            this.Num_5.Size = new System.Drawing.Size(118, 73);
-            this.Num_5.TabIndex = 3;
-            this.Num_5.Text = "5";
-            this.Num_5.UseVisualStyleBackColor = true;
-            // 
-            // Num_6
-            // 
-            this.Num_6.Location = new System.Drawing.Point(241, 228);
-            this.Num_6.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_6.Name = "Num_6";
-            this.Num_6.Size = new System.Drawing.Size(118, 73);
-            this.Num_6.TabIndex = 4;
-            this.Num_6.Text = "6";
-            this.Num_6.UseVisualStyleBackColor = true;
-            // 
-            // Num_3
-            // 
-            this.Num_3.Location = new System.Drawing.Point(241, 303);
-            this.Num_3.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_3.Name = "Num_3";
-            this.Num_3.Size = new System.Drawing.Size(118, 73);
-            this.Num_3.TabIndex = 5;
-            this.Num_3.Text = "3";
-            this.Num_3.UseVisualStyleBackColor = true;
-            // 
-            // Num_2
-            // 
-            this.Num_2.Location = new System.Drawing.Point(121, 303);
-            this.Num_2.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_2.Name = "Num_2";
-            this.Num_2.Size = new System.Drawing.Size(118, 73);
-            this.Num_2.TabIndex = 6;
-            this.Num_2.Text = "2";
-            this.Num_2.UseVisualStyleBackColor = true;
-            // 
-            // _Point
-            // 
-            this._Point.Font = new System.Drawing.Font("宋体", 19F);
-            this._Point.Location = new System.Drawing.Point(241, 378);
-            this._Point.Margin = new System.Windows.Forms.Padding(1);
-            this._Point.Name = "_Point";
-            this._Point.Size = new System.Drawing.Size(118, 73);
-            this._Point.TabIndex = 7;
-            this._Point.Text = ".";
-            this._Point.UseVisualStyleBackColor = true;
-            // 
-            // Num_0
-            // 
-            this.Num_0.Location = new System.Drawing.Point(121, 378);
-            this.Num_0.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_0.Name = "Num_0";
-            this.Num_0.Size = new System.Drawing.Size(118, 73);
-            this.Num_0.TabIndex = 8;
-            this.Num_0.Text = "0";
-            this.Num_0.UseVisualStyleBackColor = true;
-            // 
-            // Equal
-            // 
-            this.Equal.Location = new System.Drawing.Point(361, 378);
-            this.Equal.Margin = new System.Windows.Forms.Padding(1);
-            this.Equal.Name = "Equal";
-            this.Equal.Size = new System.Drawing.Size(118, 73);
-            this.Equal.TabIndex = 9;
-            this.Equal.Text = "=";
-            this.Equal.UseVisualStyleBackColor = true;
-            // 
-            // Plus
-            // 
-            this.Plus.Location = new System.Drawing.Point(361, 303);
-            this.Plus.Margin = new System.Windows.Forms.Padding(1);
-            this.Plus.Name = "Plus";
-            this.Plus.Size = new System.Drawing.Size(118, 73);
-            this.Plus.TabIndex = 10;
-            this.Plus.Text = "+";
-            this.Plus.UseVisualStyleBackColor = true;
-            // 
-            // Minus
-            // 
-            this.Minus.Location = new System.Drawing.Point(361, 228);
-            this.Minus.Margin = new System.Windows.Forms.Padding(1);
-            this.Minus.Name = "Minus";
-            this.Minus.Size = new System.Drawing.Size(118, 73);
-            this.Minus.TabIndex = 11;
-            this.Minus.Text = "-";
-            this.Minus.UseVisualStyleBackColor = true;
-            // 
-            // Negate
-            // 
-            this.Negate.Location = new System.Drawing.Point(0, 378);
-            this.Negate.Margin = new System.Windows.Forms.Padding(1);
-            this.Negate.Name = "Negate";
-            this.Negate.Size = new System.Drawing.Size(118, 73);
-            this.Negate.TabIndex = 12;
-            this.Negate.Text = "±";
-            this.Negate.UseVisualStyleBackColor = true;
-            // 
-            // Num_1
-            // 
-            this.Num_1.Location = new System.Drawing.Point(1, 303);
-            this.Num_1.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_1.Name = "Num_1";
-            this.Num_1.Size = new System.Drawing.Size(118, 73);
-            this.Num_1.TabIndex = 13;
-            this.Num_1.Text = "1";
-            this.Num_1.UseVisualStyleBackColor = true;
-            this.Num_1.Click += new System.EventHandler(this.Num_1_Click);
-            // 
-            // Num_4
-            // 
-            this.Num_4.Location = new System.Drawing.Point(1, 228);
-            this.Num_4.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_4.Name = "Num_4";
-            this.Num_4.Size = new System.Drawing.Size(118, 73);
-            this.Num_4.TabIndex = 14;
-            this.Num_4.Text = "4";
-            this.Num_4.UseVisualStyleBackColor = true;
-            // 
-            // Multiply
-            // 
-            this.Multiply.Location = new System.Drawing.Point(361, 153);
-            this.Multiply.Margin = new System.Windows.Forms.Padding(1);
-            this.Multiply.Name = "Multiply";
-            this.Multiply.Size = new System.Drawing.Size(118, 73);
-            this.Multiply.TabIndex = 15;
-            this.Multiply.Text = "x";
-            this.Multiply.UseVisualStyleBackColor = true;
-            // 
-            // Num_7
-            // 
-            this.Num_7.Location = new System.Drawing.Point(1, 153);
-            this.Num_7.Margin = new System.Windows.Forms.Padding(1);
-            this.Num_7.Name = "Num_7";
-            this.Num_7.Size = new System.Drawing.Size(118, 73);
-            this.Num_7.TabIndex = 16;
-            this.Num_7.Text = "7";
-            this.Num_7.UseVisualStyleBackColor = true;
-            // 
-            // Divide
-            // 
-            this.Divide.Location = new System.Drawing.Point(361, 78);
-            this.Divide.Margin = new System.Windows.Forms.Padding(1);
-            this.Divide.Name = "Divide";
-            this.Divide.Size = new System.Drawing.Size(118, 73);
-            this.Divide.TabIndex = 17;
-            this.Divide.Text = "÷";
-            this.Divide.UseVisualStyleBackColor = true;
-            // 
-            // Backspace
-            // 
-            this.Backspace.Location = new System.Drawing.Point(241, 78);
-            this.Backspace.Margin = new System.Windows.Forms.Padding(1);
-            this.Backspace.Name = "Backspace";
-            this.Backspace.Size = new System.Drawing.Size(118, 73);
-            this.Backspace.TabIndex = 18;
-            this.Backspace.Text = "Backspace";
-            this.Backspace.UseVisualStyleBackColor = true;
-            // 
-            // C
-            // 
-            this.C.Location = new System.Drawing.Point(121, 78);
-            this.C.Margin = new System.Windows.Forms.Padding(1);
-            this.C.Name = "C";
-            this.C.Size = new System.Drawing.Size(118, 73);
-            this.C.TabIndex = 19;
-            this.C.Text = "C";
-            this.C.UseVisualStyleBackColor = true;
-            // 
-            // CE
-            // 
-            this.CE.Location = new System.Drawing.Point(0, 78);
-            this.CE.Margin = new System.Windows.Forms.Padding(1);
-            this.CE.Name = "CE";
-            this.CE.Size = new System.Drawing.Size(118, 73);
-            this.CE.TabIndex = 20;
-            this.CE.Text = "CE";
-            this.CE.UseVisualStyleBackColor = true;
-            // 
-            // Reciprocal
-            // 
-            this.Reciprocal.Font = new System.Drawing.Font("宋体", 18F);
-            this.Reciprocal.Location = new System.Drawing.Point(361, 3);
-            this.Reciprocal.Margin = new System.Windows.Forms.Padding(1);
-            this.Reciprocal.Name = "Reciprocal";
-            this.Reciprocal.Size = new System.Drawing.Size(118, 73);
-            this.Reciprocal.TabIndex = 21;
-            this.Reciprocal.Text = "1/x";
-            this.Reciprocal.UseVisualStyleBackColor = true;
+            this.Sqrt.Location = new System.Drawing.Point(121, 3);
+            this.Sqrt.Margin = new System.Windows.Forms.Padding(1);
+            this.Sqrt.Name = "Sqrt";
+            this.Sqrt.Size = new System.Drawing.Size(118, 73);
+            this.Sqrt.TabIndex = 23;
+            this.Sqrt.Text = "√";
+            this.Sqrt.UseVisualStyleBackColor = true;
             // 
             // Square
             // 
@@ -328,18 +118,235 @@
             this.Square.Text = "x²";
             this.Square.UseVisualStyleBackColor = true;
             // 
-            // Sqrt
+            // Reciprocal
             // 
-            this.Sqrt.Location = new System.Drawing.Point(121, 3);
-            this.Sqrt.Margin = new System.Windows.Forms.Padding(1);
-            this.Sqrt.Name = "Sqrt";
-            this.Sqrt.Size = new System.Drawing.Size(118, 73);
-            this.Sqrt.TabIndex = 23;
-            this.Sqrt.Text = "√";
-            this.Sqrt.UseVisualStyleBackColor = true;
+            this.Reciprocal.Font = new System.Drawing.Font("宋体", 18F);
+            this.Reciprocal.Location = new System.Drawing.Point(361, 3);
+            this.Reciprocal.Margin = new System.Windows.Forms.Padding(1);
+            this.Reciprocal.Name = "Reciprocal";
+            this.Reciprocal.Size = new System.Drawing.Size(118, 73);
+            this.Reciprocal.TabIndex = 21;
+            this.Reciprocal.Text = "1/x";
+            this.Reciprocal.UseVisualStyleBackColor = true;
+            // 
+            // CE
+            // 
+            this.CE.Location = new System.Drawing.Point(0, 78);
+            this.CE.Margin = new System.Windows.Forms.Padding(1);
+            this.CE.Name = "CE";
+            this.CE.Size = new System.Drawing.Size(118, 73);
+            this.CE.TabIndex = 20;
+            this.CE.Text = "CE";
+            this.CE.UseVisualStyleBackColor = true;
+            // 
+            // C
+            // 
+            this.C.Location = new System.Drawing.Point(121, 78);
+            this.C.Margin = new System.Windows.Forms.Padding(1);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(118, 73);
+            this.C.TabIndex = 19;
+            this.C.Text = "C";
+            this.C.UseVisualStyleBackColor = true;
+            // 
+            // Backspace
+            // 
+            this.Backspace.Location = new System.Drawing.Point(241, 78);
+            this.Backspace.Margin = new System.Windows.Forms.Padding(1);
+            this.Backspace.Name = "Backspace";
+            this.Backspace.Size = new System.Drawing.Size(118, 73);
+            this.Backspace.TabIndex = 18;
+            this.Backspace.Text = "Backspace";
+            this.Backspace.UseVisualStyleBackColor = true;
+            // 
+            // Divide
+            // 
+            this.Divide.Location = new System.Drawing.Point(361, 78);
+            this.Divide.Margin = new System.Windows.Forms.Padding(1);
+            this.Divide.Name = "Divide";
+            this.Divide.Size = new System.Drawing.Size(118, 73);
+            this.Divide.TabIndex = 17;
+            this.Divide.Text = "÷";
+            this.Divide.UseVisualStyleBackColor = true;
+            // 
+            // Num_7
+            // 
+            this.Num_7.Location = new System.Drawing.Point(1, 153);
+            this.Num_7.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_7.Name = "Num_7";
+            this.Num_7.Size = new System.Drawing.Size(118, 73);
+            this.Num_7.TabIndex = 16;
+            this.Num_7.Text = "7";
+            this.Num_7.UseVisualStyleBackColor = true;
+            // 
+            // Multiply
+            // 
+            this.Multiply.Location = new System.Drawing.Point(361, 153);
+            this.Multiply.Margin = new System.Windows.Forms.Padding(1);
+            this.Multiply.Name = "Multiply";
+            this.Multiply.Size = new System.Drawing.Size(118, 73);
+            this.Multiply.TabIndex = 15;
+            this.Multiply.Text = "x";
+            this.Multiply.UseVisualStyleBackColor = true;
+            // 
+            // Num_4
+            // 
+            this.Num_4.Location = new System.Drawing.Point(1, 228);
+            this.Num_4.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_4.Name = "Num_4";
+            this.Num_4.Size = new System.Drawing.Size(118, 73);
+            this.Num_4.TabIndex = 14;
+            this.Num_4.Text = "4";
+            this.Num_4.UseVisualStyleBackColor = true;
+            // 
+            // Num_1
+            // 
+            this.Num_1.Location = new System.Drawing.Point(1, 303);
+            this.Num_1.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_1.Name = "Num_1";
+            this.Num_1.Size = new System.Drawing.Size(118, 73);
+            this.Num_1.TabIndex = 13;
+            this.Num_1.Text = "1";
+            this.Num_1.UseVisualStyleBackColor = true;
+            this.Num_1.Click += new System.EventHandler(this.Num_1_Click);
+            // 
+            // Negate
+            // 
+            this.Negate.Location = new System.Drawing.Point(0, 378);
+            this.Negate.Margin = new System.Windows.Forms.Padding(1);
+            this.Negate.Name = "Negate";
+            this.Negate.Size = new System.Drawing.Size(118, 73);
+            this.Negate.TabIndex = 12;
+            this.Negate.Text = "±";
+            this.Negate.UseVisualStyleBackColor = true;
+            // 
+            // Minus
+            // 
+            this.Minus.Location = new System.Drawing.Point(361, 228);
+            this.Minus.Margin = new System.Windows.Forms.Padding(1);
+            this.Minus.Name = "Minus";
+            this.Minus.Size = new System.Drawing.Size(118, 73);
+            this.Minus.TabIndex = 11;
+            this.Minus.Text = "-";
+            this.Minus.UseVisualStyleBackColor = true;
+            // 
+            // Plus
+            // 
+            this.Plus.Location = new System.Drawing.Point(361, 303);
+            this.Plus.Margin = new System.Windows.Forms.Padding(1);
+            this.Plus.Name = "Plus";
+            this.Plus.Size = new System.Drawing.Size(118, 73);
+            this.Plus.TabIndex = 10;
+            this.Plus.Text = "+";
+            this.Plus.UseVisualStyleBackColor = true;
+            // 
+            // Equal
+            // 
+            this.Equal.Location = new System.Drawing.Point(361, 378);
+            this.Equal.Margin = new System.Windows.Forms.Padding(1);
+            this.Equal.Name = "Equal";
+            this.Equal.Size = new System.Drawing.Size(118, 73);
+            this.Equal.TabIndex = 9;
+            this.Equal.Text = "=";
+            this.Equal.UseVisualStyleBackColor = true;
+            // 
+            // Num_0
+            // 
+            this.Num_0.Location = new System.Drawing.Point(121, 378);
+            this.Num_0.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_0.Name = "Num_0";
+            this.Num_0.Size = new System.Drawing.Size(118, 73);
+            this.Num_0.TabIndex = 8;
+            this.Num_0.Text = "0";
+            this.Num_0.UseVisualStyleBackColor = true;
+            // 
+            // _Point
+            // 
+            this._Point.Font = new System.Drawing.Font("宋体", 19F);
+            this._Point.Location = new System.Drawing.Point(241, 378);
+            this._Point.Margin = new System.Windows.Forms.Padding(1);
+            this._Point.Name = "_Point";
+            this._Point.Size = new System.Drawing.Size(118, 73);
+            this._Point.TabIndex = 7;
+            this._Point.Text = ".";
+            this._Point.UseVisualStyleBackColor = true;
+            // 
+            // Num_2
+            // 
+            this.Num_2.Location = new System.Drawing.Point(121, 303);
+            this.Num_2.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_2.Name = "Num_2";
+            this.Num_2.Size = new System.Drawing.Size(118, 73);
+            this.Num_2.TabIndex = 6;
+            this.Num_2.Text = "2";
+            this.Num_2.UseVisualStyleBackColor = true;
+            // 
+            // Num_3
+            // 
+            this.Num_3.Location = new System.Drawing.Point(241, 303);
+            this.Num_3.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_3.Name = "Num_3";
+            this.Num_3.Size = new System.Drawing.Size(118, 73);
+            this.Num_3.TabIndex = 5;
+            this.Num_3.Text = "3";
+            this.Num_3.UseVisualStyleBackColor = true;
+            // 
+            // Num_6
+            // 
+            this.Num_6.Location = new System.Drawing.Point(241, 228);
+            this.Num_6.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_6.Name = "Num_6";
+            this.Num_6.Size = new System.Drawing.Size(118, 73);
+            this.Num_6.TabIndex = 4;
+            this.Num_6.Text = "6";
+            this.Num_6.UseVisualStyleBackColor = true;
+            // 
+            // Num_5
+            // 
+            this.Num_5.Location = new System.Drawing.Point(121, 228);
+            this.Num_5.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_5.Name = "Num_5";
+            this.Num_5.Size = new System.Drawing.Size(118, 73);
+            this.Num_5.TabIndex = 3;
+            this.Num_5.Text = "5";
+            this.Num_5.UseVisualStyleBackColor = true;
+            // 
+            // Num_9
+            // 
+            this.Num_9.Location = new System.Drawing.Point(241, 153);
+            this.Num_9.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_9.Name = "Num_9";
+            this.Num_9.Size = new System.Drawing.Size(118, 73);
+            this.Num_9.TabIndex = 2;
+            this.Num_9.Text = "9";
+            this.Num_9.UseVisualStyleBackColor = true;
+            // 
+            // Num_8
+            // 
+            this.Num_8.Location = new System.Drawing.Point(121, 153);
+            this.Num_8.Margin = new System.Windows.Forms.Padding(1);
+            this.Num_8.Name = "Num_8";
+            this.Num_8.Size = new System.Drawing.Size(118, 73);
+            this.Num_8.TabIndex = 1;
+            this.Num_8.Text = "8";
+            this.Num_8.UseVisualStyleBackColor = true;
+            // 
+            // Mod
+            // 
+            this.Mod.Font = new System.Drawing.Font("宋体", 18F);
+            this.Mod.Location = new System.Drawing.Point(1, 3);
+            this.Mod.Margin = new System.Windows.Forms.Padding(1);
+            this.Mod.Name = "Mod";
+            this.Mod.Size = new System.Drawing.Size(118, 73);
+            this.Mod.TabIndex = 0;
+            this.Mod.Text = "%";
+            this.Mod.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ExpressionL);
+            this.panel2.Controls.Add(this.StatusName);
+            this.panel2.Controls.Add(this.Status);
             this.panel2.Controls.Add(this.ANS);
             this.panel2.Controls.Add(this.Expression);
             this.panel2.Controls.Add(this.Result);
@@ -348,12 +355,33 @@
             this.panel2.Size = new System.Drawing.Size(480, 206);
             this.panel2.TabIndex = 1;
             // 
+            // ANS
+            // 
+            this.ANS.AutoSize = true;
+            this.ANS.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ANS.Location = new System.Drawing.Point(434, 158);
+            this.ANS.Name = "ANS";
+            this.ANS.Size = new System.Drawing.Size(0, 33);
+            this.ANS.TabIndex = 2;
+            // 
+            // Expression
+            // 
+            this.Expression.BackColor = System.Drawing.SystemColors.Control;
+            this.Expression.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Expression.Font = new System.Drawing.Font("黑体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Expression.Location = new System.Drawing.Point(2, 33);
+            this.Expression.Name = "Expression";
+            this.Expression.Size = new System.Drawing.Size(476, 58);
+            this.Expression.TabIndex = 1;
+            this.Expression.Text = "";
+            // 
             // Result
             // 
             this.Result.BackColor = System.Drawing.SystemColors.Control;
             this.Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Result.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Result.Location = new System.Drawing.Point(2, 91);
+            this.Result.Multiline = false;
             this.Result.Name = "Result";
             this.Result.ReadOnly = true;
             this.Result.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -363,25 +391,35 @@
             this.Result.Text = "";
             this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
             // 
-            // Expression
+            // Status
             // 
-            this.Expression.BackColor = System.Drawing.SystemColors.Control;
-            this.Expression.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Expression.Location = new System.Drawing.Point(2, 33);
-            this.Expression.Name = "Expression";
-            this.Expression.Size = new System.Drawing.Size(476, 58);
-            this.Expression.TabIndex = 1;
-            this.Expression.Text = "";
+            this.Status.Image = global::Calculator.Properties.Resources._1;
+            this.Status.Location = new System.Drawing.Point(2, 3);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(44, 25);
+            this.Status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Status.TabIndex = 3;
+            this.Status.TabStop = false;
             // 
-            // ANS
+            // StatusName
             // 
-            this.ANS.AutoSize = true;
-            this.ANS.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ANS.Location = new System.Drawing.Point(434, 158);
-            this.ANS.Name = "ANS";
-            this.ANS.Size = new System.Drawing.Size(31, 33);
-            this.ANS.TabIndex = 2;
-            this.ANS.Text = "1";
+            this.StatusName.AutoSize = true;
+            this.StatusName.Font = new System.Drawing.Font("黑体", 16F);
+            this.StatusName.Location = new System.Drawing.Point(52, 3);
+            this.StatusName.Name = "StatusName";
+            this.StatusName.Size = new System.Drawing.Size(54, 22);
+            this.StatusName.TabIndex = 4;
+            this.StatusName.Text = "标准";
+            // 
+            // ExpressionL
+            // 
+            this.ExpressionL.AutoSize = true;
+            this.ExpressionL.Font = new System.Drawing.Font("黑体", 14F);
+            this.ExpressionL.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ExpressionL.Location = new System.Drawing.Point(436, 72);
+            this.ExpressionL.Name = "ExpressionL";
+            this.ExpressionL.Size = new System.Drawing.Size(0, 19);
+            this.ExpressionL.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -396,6 +434,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Status)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,6 +470,9 @@
         private System.Windows.Forms.RichTextBox Expression;
         private System.Windows.Forms.RichTextBox Result;
         private System.Windows.Forms.Label ANS;
+        private System.Windows.Forms.Label StatusName;
+        private System.Windows.Forms.PictureBox Status;
+        private System.Windows.Forms.Label ExpressionL;
     }
 }
 
