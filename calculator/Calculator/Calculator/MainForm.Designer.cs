@@ -61,12 +61,11 @@
             this.Expression = new System.Windows.Forms.RichTextBox();
             this.Result = new System.Windows.Forms.RichTextBox();
             this.Chosen = new System.Windows.Forms.Panel();
+            this.Sixty = new System.Windows.Forms.Button();
+            this.Eight = new System.Windows.Forms.Button();
+            this.Two = new System.Windows.Forms.Button();
             this.Scientist = new System.Windows.Forms.Button();
             this.Standard = new System.Windows.Forms.Button();
-            this.Programer = new System.Windows.Forms.Button();
-            this.Two = new System.Windows.Forms.Button();
-            this.Eight = new System.Windows.Forms.Button();
-            this.Sixty = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Status)).BeginInit();
@@ -147,6 +146,7 @@
             this.CE.TabIndex = 20;
             this.CE.Text = "CE";
             this.CE.UseVisualStyleBackColor = true;
+            this.CE.Click += new System.EventHandler(this.CE_Click);
             // 
             // C
             // 
@@ -157,6 +157,7 @@
             this.C.TabIndex = 19;
             this.C.Text = "C";
             this.C.UseVisualStyleBackColor = true;
+            this.C.Click += new System.EventHandler(this.C_Click);
             // 
             // Backspace
             // 
@@ -167,6 +168,7 @@
             this.Backspace.TabIndex = 18;
             this.Backspace.Text = "Backspace";
             this.Backspace.UseVisualStyleBackColor = true;
+            this.Backspace.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // Divide
             // 
@@ -280,6 +282,7 @@
             this._Point.TabIndex = 7;
             this._Point.Text = ".";
             this._Point.UseVisualStyleBackColor = true;
+            this._Point.Click += new System.EventHandler(this._Point_Click);
             // 
             // Num_2
             // 
@@ -443,7 +446,6 @@
             this.Chosen.Controls.Add(this.Sixty);
             this.Chosen.Controls.Add(this.Eight);
             this.Chosen.Controls.Add(this.Two);
-            this.Chosen.Controls.Add(this.Programer);
             this.Chosen.Controls.Add(this.Scientist);
             this.Chosen.Controls.Add(this.Standard);
             this.Chosen.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -453,6 +455,33 @@
             this.Chosen.TabIndex = 6;
             this.Chosen.Visible = false;
             // 
+            // Sixty
+            // 
+            this.Sixty.Location = new System.Drawing.Point(3, 200);
+            this.Sixty.Name = "Sixty";
+            this.Sixty.Size = new System.Drawing.Size(111, 42);
+            this.Sixty.TabIndex = 12;
+            this.Sixty.Text = "十六进制";
+            this.Sixty.UseVisualStyleBackColor = true;
+            // 
+            // Eight
+            // 
+            this.Eight.Location = new System.Drawing.Point(3, 153);
+            this.Eight.Name = "Eight";
+            this.Eight.Size = new System.Drawing.Size(111, 42);
+            this.Eight.TabIndex = 11;
+            this.Eight.Text = "八进制";
+            this.Eight.UseVisualStyleBackColor = true;
+            // 
+            // Two
+            // 
+            this.Two.Location = new System.Drawing.Point(3, 105);
+            this.Two.Name = "Two";
+            this.Two.Size = new System.Drawing.Size(111, 42);
+            this.Two.TabIndex = 10;
+            this.Two.Text = "二进制";
+            this.Two.UseVisualStyleBackColor = true;
+            // 
             // Scientist
             // 
             this.Scientist.Location = new System.Drawing.Point(3, 54);
@@ -461,6 +490,7 @@
             this.Scientist.TabIndex = 7;
             this.Scientist.Text = "科学";
             this.Scientist.UseVisualStyleBackColor = true;
+            this.Scientist.Click += new System.EventHandler(this.Scientist_Click);
             // 
             // Standard
             // 
@@ -470,42 +500,7 @@
             this.Standard.TabIndex = 8;
             this.Standard.Text = "标准";
             this.Standard.UseVisualStyleBackColor = true;
-            // 
-            // Programer
-            // 
-            this.Programer.Location = new System.Drawing.Point(3, 105);
-            this.Programer.Name = "Programer";
-            this.Programer.Size = new System.Drawing.Size(111, 42);
-            this.Programer.TabIndex = 9;
-            this.Programer.Text = "程序员";
-            this.Programer.UseVisualStyleBackColor = true;
-            // 
-            // Two
-            // 
-            this.Two.Location = new System.Drawing.Point(3, 153);
-            this.Two.Name = "Two";
-            this.Two.Size = new System.Drawing.Size(111, 42);
-            this.Two.TabIndex = 10;
-            this.Two.Text = "二进制";
-            this.Two.UseVisualStyleBackColor = true;
-            // 
-            // Eight
-            // 
-            this.Eight.Location = new System.Drawing.Point(3, 201);
-            this.Eight.Name = "Eight";
-            this.Eight.Size = new System.Drawing.Size(111, 42);
-            this.Eight.TabIndex = 11;
-            this.Eight.Text = "八进制";
-            this.Eight.UseVisualStyleBackColor = true;
-            // 
-            // Sixty
-            // 
-            this.Sixty.Location = new System.Drawing.Point(3, 248);
-            this.Sixty.Name = "Sixty";
-            this.Sixty.Size = new System.Drawing.Size(111, 42);
-            this.Sixty.TabIndex = 12;
-            this.Sixty.Text = "十六进制";
-            this.Sixty.UseVisualStyleBackColor = true;
+            this.Standard.Click += new System.EventHandler(this.Standard_Click);
             // 
             // MainForm
             // 
@@ -564,7 +559,6 @@
         private System.Windows.Forms.Panel Chosen;
         private System.Windows.Forms.Button Standard;
         private System.Windows.Forms.Button Scientist;
-        private System.Windows.Forms.Button Programer;
         private System.Windows.Forms.Button Two;
         private System.Windows.Forms.Button Sixty;
         private System.Windows.Forms.Button Eight;

@@ -24,10 +24,20 @@ namespace Calculator
         public int Number1=0;
         public int Number2=0;
         public string Symbol;
+        public string LastSymbol;
         public int Result1;
     }
     public static class Judge
     {
       public  static bool isResult = false;
+    }
+    public static class Cal
+    {
+        public static double a =0;
+        public static double b =0;
+        public static double Last = 0;
+        public static bool isLastChanged = false;
+        public static bool isChanged = false;
+        public static char Symbol;
     }
 }
