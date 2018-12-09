@@ -26,4 +26,8 @@ namespace Calculator
         public string Symbol;
         public int Result1;
     }
+    public static class Judge
+    {
+      public  static bool isResult = false;
+    }
 }

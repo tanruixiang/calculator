@@ -54,19 +54,28 @@
             this.Num_8 = new System.Windows.Forms.Button();
             this.Mod = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ExpressionL = new System.Windows.Forms.Label();
+            this.StatusName = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.PictureBox();
             this.ANS = new System.Windows.Forms.Label();
             this.Expression = new System.Windows.Forms.RichTextBox();
             this.Result = new System.Windows.Forms.RichTextBox();
-            this.Status = new System.Windows.Forms.PictureBox();
-            this.StatusName = new System.Windows.Forms.Label();
-            this.ExpressionL = new System.Windows.Forms.Label();
+            this.Chosen = new System.Windows.Forms.Panel();
+            this.Scientist = new System.Windows.Forms.Button();
+            this.Standard = new System.Windows.Forms.Button();
+            this.Programer = new System.Windows.Forms.Button();
+            this.Two = new System.Windows.Forms.Button();
+            this.Eight = new System.Windows.Forms.Button();
+            this.Sixty = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Status)).BeginInit();
+            this.Chosen.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.Sqrt);
             this.panel1.Controls.Add(this.Square);
             this.panel1.Controls.Add(this.Reciprocal);
@@ -249,6 +258,7 @@
             this.Equal.TabIndex = 9;
             this.Equal.Text = "=";
             this.Equal.UseVisualStyleBackColor = true;
+            this.Equal.Click += new System.EventHandler(this.Equal_Click);
             // 
             // Num_0
             // 
@@ -355,51 +365,15 @@
             this.panel2.Size = new System.Drawing.Size(480, 206);
             this.panel2.TabIndex = 1;
             // 
-            // ANS
+            // ExpressionL
             // 
-            this.ANS.AutoSize = true;
-            this.ANS.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ANS.Location = new System.Drawing.Point(434, 158);
-            this.ANS.Name = "ANS";
-            this.ANS.Size = new System.Drawing.Size(0, 33);
-            this.ANS.TabIndex = 2;
-            // 
-            // Expression
-            // 
-            this.Expression.BackColor = System.Drawing.SystemColors.Control;
-            this.Expression.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Expression.Font = new System.Drawing.Font("黑体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Expression.Location = new System.Drawing.Point(2, 33);
-            this.Expression.Name = "Expression";
-            this.Expression.Size = new System.Drawing.Size(476, 58);
-            this.Expression.TabIndex = 1;
-            this.Expression.Text = "";
-            // 
-            // Result
-            // 
-            this.Result.BackColor = System.Drawing.SystemColors.Control;
-            this.Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Result.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Result.Location = new System.Drawing.Point(2, 91);
-            this.Result.Multiline = false;
-            this.Result.Name = "Result";
-            this.Result.ReadOnly = true;
-            this.Result.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Result.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.Result.Size = new System.Drawing.Size(476, 114);
-            this.Result.TabIndex = 0;
-            this.Result.Text = "";
-            this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
-            // 
-            // Status
-            // 
-            this.Status.Image = global::Calculator.Properties.Resources._1;
-            this.Status.Location = new System.Drawing.Point(2, 3);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(44, 25);
-            this.Status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Status.TabIndex = 3;
-            this.Status.TabStop = false;
+            this.ExpressionL.AutoSize = true;
+            this.ExpressionL.Font = new System.Drawing.Font("黑体", 14F);
+            this.ExpressionL.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ExpressionL.Location = new System.Drawing.Point(436, 72);
+            this.ExpressionL.Name = "ExpressionL";
+            this.ExpressionL.Size = new System.Drawing.Size(0, 19);
+            this.ExpressionL.TabIndex = 5;
             // 
             // StatusName
             // 
@@ -411,21 +385,134 @@
             this.StatusName.TabIndex = 4;
             this.StatusName.Text = "标准";
             // 
-            // ExpressionL
+            // Status
             // 
-            this.ExpressionL.AutoSize = true;
-            this.ExpressionL.Font = new System.Drawing.Font("黑体", 14F);
-            this.ExpressionL.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.ExpressionL.Location = new System.Drawing.Point(436, 72);
-            this.ExpressionL.Name = "ExpressionL";
-            this.ExpressionL.Size = new System.Drawing.Size(0, 19);
-            this.ExpressionL.TabIndex = 5;
+            this.Status.BackColor = System.Drawing.Color.Transparent;
+            this.Status.Image = global::Calculator.Properties.Resources._1;
+            this.Status.Location = new System.Drawing.Point(2, 3);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(44, 25);
+            this.Status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Status.TabIndex = 3;
+            this.Status.TabStop = false;
+            this.Status.Click += new System.EventHandler(this.Status_Click);
+            // 
+            // ANS
+            // 
+            this.ANS.AutoSize = true;
+            this.ANS.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ANS.Location = new System.Drawing.Point(434, 158);
+            this.ANS.Name = "ANS";
+            this.ANS.Size = new System.Drawing.Size(0, 33);
+            this.ANS.TabIndex = 2;
+            // 
+            // Expression
+            // 
+            this.Expression.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Expression.BackColor = System.Drawing.SystemColors.Control;
+            this.Expression.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Expression.Font = new System.Drawing.Font("黑体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Expression.Location = new System.Drawing.Point(2, 33);
+            this.Expression.Margin = new System.Windows.Forms.Padding(0);
+            this.Expression.Name = "Expression";
+            this.Expression.Size = new System.Drawing.Size(481, 58);
+            this.Expression.TabIndex = 1;
+            this.Expression.Text = "";
+            // 
+            // Result
+            // 
+            this.Result.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Result.BackColor = System.Drawing.SystemColors.Control;
+            this.Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Result.Font = new System.Drawing.Font("黑体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Result.Location = new System.Drawing.Point(2, 91);
+            this.Result.Margin = new System.Windows.Forms.Padding(0);
+            this.Result.Multiline = false;
+            this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
+            this.Result.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Result.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.Result.Size = new System.Drawing.Size(481, 114);
+            this.Result.TabIndex = 0;
+            this.Result.Text = "";
+            this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
+            // 
+            // Chosen
+            // 
+            this.Chosen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Chosen.Controls.Add(this.Sixty);
+            this.Chosen.Controls.Add(this.Eight);
+            this.Chosen.Controls.Add(this.Two);
+            this.Chosen.Controls.Add(this.Programer);
+            this.Chosen.Controls.Add(this.Scientist);
+            this.Chosen.Controls.Add(this.Standard);
+            this.Chosen.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Chosen.Location = new System.Drawing.Point(3, 35);
+            this.Chosen.Name = "Chosen";
+            this.Chosen.Size = new System.Drawing.Size(117, 875);
+            this.Chosen.TabIndex = 6;
+            this.Chosen.Visible = false;
+            // 
+            // Scientist
+            // 
+            this.Scientist.Location = new System.Drawing.Point(3, 54);
+            this.Scientist.Name = "Scientist";
+            this.Scientist.Size = new System.Drawing.Size(111, 45);
+            this.Scientist.TabIndex = 7;
+            this.Scientist.Text = "科学";
+            this.Scientist.UseVisualStyleBackColor = true;
+            // 
+            // Standard
+            // 
+            this.Standard.Location = new System.Drawing.Point(2, 3);
+            this.Standard.Name = "Standard";
+            this.Standard.Size = new System.Drawing.Size(111, 45);
+            this.Standard.TabIndex = 8;
+            this.Standard.Text = "标准";
+            this.Standard.UseVisualStyleBackColor = true;
+            // 
+            // Programer
+            // 
+            this.Programer.Location = new System.Drawing.Point(3, 105);
+            this.Programer.Name = "Programer";
+            this.Programer.Size = new System.Drawing.Size(111, 42);
+            this.Programer.TabIndex = 9;
+            this.Programer.Text = "程序员";
+            this.Programer.UseVisualStyleBackColor = true;
+            // 
+            // Two
+            // 
+            this.Two.Location = new System.Drawing.Point(3, 153);
+            this.Two.Name = "Two";
+            this.Two.Size = new System.Drawing.Size(111, 42);
+            this.Two.TabIndex = 10;
+            this.Two.Text = "二进制";
+            this.Two.UseVisualStyleBackColor = true;
+            // 
+            // Eight
+            // 
+            this.Eight.Location = new System.Drawing.Point(3, 201);
+            this.Eight.Name = "Eight";
+            this.Eight.Size = new System.Drawing.Size(111, 42);
+            this.Eight.TabIndex = 11;
+            this.Eight.Text = "八进制";
+            this.Eight.UseVisualStyleBackColor = true;
+            // 
+            // Sixty
+            // 
+            this.Sixty.Location = new System.Drawing.Point(3, 248);
+            this.Sixty.Name = "Sixty";
+            this.Sixty.Size = new System.Drawing.Size(111, 42);
+            this.Sixty.TabIndex = 12;
+            this.Sixty.Text = "十六进制";
+            this.Sixty.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 707);
+            this.Controls.Add(this.Chosen);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
@@ -435,6 +522,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Status)).EndInit();
+            this.Chosen.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -473,6 +561,13 @@
         private System.Windows.Forms.Label StatusName;
         private System.Windows.Forms.PictureBox Status;
         private System.Windows.Forms.Label ExpressionL;
+        private System.Windows.Forms.Panel Chosen;
+        private System.Windows.Forms.Button Standard;
+        private System.Windows.Forms.Button Scientist;
+        private System.Windows.Forms.Button Programer;
+        private System.Windows.Forms.Button Two;
+        private System.Windows.Forms.Button Sixty;
+        private System.Windows.Forms.Button Eight;
     }
 }
 
