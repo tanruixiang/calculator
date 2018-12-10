@@ -16,7 +16,7 @@ namespace Calculator
         public MainForm()
         {
             InitializeComponent();
-            EventHandler EV = new EventHandler(Numbers_Click);
+            EventHandler EV = new EventHandler(Numbers_Click);//点击数字、符号、模式分别加入委托
             Num_0.Click += EV;
             Num_1.Click += EV;
             Num_2.Click += EV;
@@ -34,6 +34,18 @@ namespace Calculator
             Plus.Click += EV2;
             Mod.Click += EV2;
             Square.Click += EV2;
+            sin.Click += EV2;
+            cos.Click += EV2;
+            In.Click += EV2;
+            Exp.Click += EV2;
+            Log.Click += EV2;
+            Pi.Click += EV2;
+            In.Click += EV2;
+            xy.Click+=EV2;
+            Sqrt.Click += EV2;
+            Reciprocal.Click += EV2;
+            tan.Click += EV2;
+            Negate.Click += EV2;
             EventHandler EV3 = new EventHandler(ModeSelected);
             Scientist.Click += EV3;
             Standard.Click += EV3;
@@ -56,7 +68,7 @@ namespace Calculator
         {
 
         }
-        private void Numbers_Click(object sender, EventArgs e)
+        private void Numbers_Click(object sender, EventArgs e)//点击数字所进行的操作
         {
             string StrClickNum = ((Button)sender).Text;
             if (Judge.isResult == true)
@@ -74,7 +86,7 @@ namespace Calculator
             else
                 R.Number1 = int.Parse(StrClickNum);
         }
-        private void Operators_Click(object sender,EventArgs e)
+        private void Operators_Click(object sender,EventArgs e)//点击符号进行运算，这里处理了所有的符号所进行的运算
         {
             if (Cal.isChanged == false)
             {
@@ -140,13 +152,90 @@ namespace Calculator
                     case "÷":
                         if (Cal.b == 0)
                         {
-                            MessageBox.Show("被除数不能为零,已被强制C");
+                            MessageBox.Show("被除数不能为零,已被强制归零");
                             C.PerformClick();
+                            break;
                         }
                         Cal.Last =double.Parse( Cal.a.ToString() )/double.Parse( Cal.b.ToString());
                         ANS.Text = (Cal.Last).ToString();
                         Cal.isLastChanged = true;
                         break;
+                    case "sin":
+                        Cal.Last = Math.Sin(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "cos":
+                        Cal.Last = Math.Cos(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "In":
+                        Cal.Last = Math.Log(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "x²":
+                        Cal.Last = Cal.a * Cal.a;
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "Exp":
+                        Cal.Last = Math.Exp(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "tan":
+                        Cal.Last = Math.Tan(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "Log":
+                        Cal.Last = Math.Log(Cal.a,Cal.b);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "π":
+                        Cal.Last = Math.PI;
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "%"://解决精度问题 减去取整数后的值小于 0.0000000001 则将其看作整数
+                        if (Cal.b - Math.Floor(Cal.b) > 0.0000000001 || Cal.a - Math.Floor(Cal.a) > 0.0000000001)
+                        {
+                            MessageBox.Show("两个数不都为整数，已被强制归零");
+                            C.PerformClick();
+                            break;
+                        }
+                        Cal.Last = Cal.a % Cal.b;
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "√":
+                        Cal.Last = Math.Sqrt(Cal.a);
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "1/x":
+                        if (Cal.a == 0)
+                        {
+                            MessageBox.Show("被除数不能为零,已被强制归零");
+                            C.PerformClick();
+                            break;
+                        }
+                        Cal.Last = 1.0/Cal.a;
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+                    case "±":
+                        Cal.Last = -Cal.a;
+                        ANS.Text = (Cal.Last).ToString();
+                        Cal.isLastChanged = true;
+                        break;
+
+
+
+
                 }
             }
             
@@ -171,25 +260,30 @@ namespace Calculator
         }
 
         private void Equal_Click(object sender, EventArgs e)
+        //点击符号进行运算，这里处理了所有的符号所进行的运算
         {
+            bool convert = false;
             
-            if(StatusName.Text=="二进制")
+            if(StatusName.Text=="二进制")//进制转换调用函数
             {
                 ANS.Text = Convert.ToString(int.Parse(ANS.Text),2);
                 ANS.Location = new Point(Result.Width - ANS.Width, ANS.Location.Y);
+                convert = true;
             }
             if(StatusName.Text=="八进制")
             {
                 ANS.Text = Convert.ToString(int.Parse(ANS.Text), 8);
                 ANS.Location = new Point(Result.Width - ANS.Width, ANS.Location.Y);
+                convert = true;
             }
             if (StatusName.Text == "十六进制")
             {
                 ANS.Text = Convert.ToString(int.Parse(ANS.Text), 16);
                 ANS.Location = new Point(Result.Width - ANS.Width, ANS.Location.Y);
+                convert = true;
             }
            
-            Cal.b = double.Parse(ANS.Text);
+            if (convert !=true)Cal.b = double.Parse(ANS.Text);//如果不处理 表示16进制的字母会使程序崩溃
             switch (R.LastSymbol)
             {
                 case "+":
@@ -210,11 +304,22 @@ namespace Calculator
                     ANS.Text = (Cal.Last).ToString();
                     Cal.isLastChanged = true;
                     break;
+                case "%"://解决精度问题 减去取整数后的值小于 0.0000000001 则将其看作整数
+                    if (Cal.b - Math.Floor(Cal.b) > 0.0000000001 || Cal.a - Math.Floor(Cal.a) > 0.0000000001) {
+                        MessageBox.Show("两个数不都为整数，已被强制归零");
+                        C.PerformClick();
+                        break;
+                    }
+                    Cal.Last = Cal.a % Cal.b;
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
                 case "÷":
                     if (Cal.b == 0)
                     {
-                        MessageBox.Show("被除数不能为零,已被强制C");
+                        MessageBox.Show("被除数不能为零,已被强制归零");
                         C.PerformClick();
+                        break;
                     }
                     Cal.Last = double.Parse(Cal.a.ToString()) / double.Parse(Cal.b.ToString());
                     ANS.Text = (Cal.Last).ToString();
@@ -226,6 +331,69 @@ namespace Calculator
                 case "x^y":
                    ANS.Text= Math.Pow(Cal.a, Cal.b).ToString();
                     break;
+                case "sin":
+                    Cal.Last = Math.Sin(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "cos":
+                    Cal.Last = Math.Cos(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "In":
+                    Cal.Last = Math.Log(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "x²":
+                    Cal.Last = Cal.a * Cal.a;
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "Exp":
+                    Cal.Last =Math.Exp(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "tan":
+                    Cal.Last = Math.Tan(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "Log":
+                    Cal.Last = Math.Log(Cal.a, Cal.b);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "π":
+                    Cal.Last = Math.PI;
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "√":
+                    Cal.Last = Math.Sqrt(Cal.a);
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "1/x":
+                    if (Cal.a == 0)
+                    {
+                        MessageBox.Show("被除数不能为零,已被强制归零");
+                        C.PerformClick();
+                        break;
+                    }
+                    Cal.Last = 1.0 / Cal.a;
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+                case "±":
+                    Cal.Last = -Cal.a;
+                    ANS.Text = (Cal.Last).ToString();
+                    Cal.isLastChanged = true;
+                    break;
+
+
             }
             ANS.Location = new Point(Result.Width - ANS.Width, ANS.Location.Y);
             Cal.a = Cal.Last;
@@ -253,12 +421,12 @@ namespace Calculator
             R.LastSymbol = null;
         }
 
-        private void _Point_Click(object sender, EventArgs e)
+        private void _Point_Click(object sender, EventArgs e)//处理点按钮
         {
             ANS.Text += ".";
         }
 
-        private void Backspace_Click(object sender, EventArgs e)
+        private void Backspace_Click(object sender, EventArgs e)//处理backspace按钮
         {
             try
             {
@@ -275,15 +443,115 @@ namespace Calculator
            
         }
 
-        private void Scientist_Click(object sender, EventArgs e)
+        private void Scientist_Click(object sender, EventArgs e)//科学计算时，显示隐藏的按钮
         {
-            Mod.Text = "Sin";
-            Square.Text = "x^y";
+       
+        //    Square.Text = "x^y";
+            sin.Visible = true;
+            cos.Visible = true;
+            In.Visible = true;
+            Exp.Visible = true;
+            tan.Visible = true;
+            Log.Visible = true;
+            xy.Visible = true;
+            Pi.Visible = true ;
+
+            Multiply.Visible = true;
+            Divide.Visible = true;
+            Minus.Visible = true;
+            Plus.Visible = true;
+            Mod.Visible = true;
+            Square.Visible = true;
+            Sqrt.Visible = true;
+            Reciprocal.Visible = true;
         }
 
-        private void Standard_Click(object sender, EventArgs e)
+        private void Standard_Click(object sender, EventArgs e)//标准计算时，显示隐藏的按钮，和隐藏部分按钮
         {
-            Mod.Text = "÷";
+          //  Square.Text = "x²";
+            
+            sin.Visible = false;
+            cos.Visible = false;
+            In.Visible = false;
+            Exp.Visible = false;
+          tan.Visible = false;
+           Log.Visible = false;
+            xy.Visible = false;
+            Pi.Visible = false; ;
+
+            Multiply.Visible = true;
+            Divide.Visible = true;
+            Minus.Visible = true;
+            Plus.Visible = true;
+            Mod.Visible = true;
+            Square.Visible = true;
+            Sqrt.Visible = true ;
+            Reciprocal.Visible = true;
+        }
+
+        private void Two_Click(object sender, EventArgs e)//进制计算时，隐藏部分按钮
+        {
+            sin.Visible = false;
+            cos.Visible = false;
+            In.Visible = false;
+            Exp.Visible = false; ;
+            tan.Visible = false;
+            Log.Visible = false;
+            xy.Visible = false;
+            Pi.Visible = false;
+            Multiply.Visible = false;
+            Divide.Visible = false;
+            Minus.Visible = false;
+            Plus.Visible = false;
+            Mod.Visible = false;
+            Square.Visible = false;
+            Sqrt.Visible = false;
+            Reciprocal.Visible = false;
+        }
+
+        private void Eight_Click(object sender, EventArgs e)
+        {
+            sin.Visible = false;
+            cos.Visible = false;
+            In.Visible = false;
+            Exp.Visible = false; ;
+            tan.Visible = false;
+            Log.Visible = false;
+            xy.Visible = false;
+            Pi.Visible = false;
+            Multiply.Visible = false;
+            Divide.Visible = false;
+            Minus.Visible = false;
+            Plus.Visible = false;
+            Mod.Visible = false;
+            Square.Visible = false;
+            Sqrt.Visible = false;
+            Reciprocal.Visible = false;
+        }
+
+        private void Sixty_Click(object sender, EventArgs e)
+        {
+            sin.Visible = false;
+            cos.Visible = false;
+            In.Visible = false;
+            Exp.Visible = false; ;
+            tan.Visible = false;
+            Log.Visible = false;
+            xy.Visible = false;
+            Pi.Visible = false;
+            Multiply.Visible = false;
+            Divide.Visible = false;
+            Minus.Visible = false;
+            Plus.Visible = false;
+            Mod.Visible = false;
+            Square.Visible = false;
+            Sqrt.Visible = false;
+            Reciprocal.Visible = false;
+        }
+
+        private void xy1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
